@@ -1,0 +1,17 @@
+{
+  "name": "portfolio",
+  "version": "0.0.1",
+  "description": "The source files for pat-lawre.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Patrick Lawrence",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^5.0.0-beta2",
+    "bootstrap-icons": "^1.4.0",
+    "jquery": "^3.6.0",
+    "popper.js": "^1.16.1"
+  }
+}

@@ -1,0 +1,51 @@
+$enable-shadows: true;
+
+$primary: #3a506b;
+$secondary: #1c2541;
+$tertiary: #0b132b;
+$light: #e8eef2;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "light": $light,
+);
+
+$custom-colors: (
+  "tertiary": $tertiary,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@for $i from 1 through 5 {
+  .a-l-fade-in-#{$i} {
+    animation: fade-in $i * 0.5s ease-in-out;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.a-h-rise {
+  transform: translateY(0rem);
+  transition: transform 0.15s ease-in-out;
+}
+
+button.a-h-rise {
+  transition: transform 0.15s ease-in-out, color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+}
+
+.a-h-rise:hover {
+  transform: translateY(-0.5rem);
+}
+
+@import "node_modules/bootstrap/scss/bootstrap";
