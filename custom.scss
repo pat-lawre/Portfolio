@@ -4,6 +4,7 @@ $primary: #3a506b;
 $secondary: #1c2541;
 $tertiary: #0b132b;
 $light: #e8eef2;
+$black: #000;
 
 $theme-colors: (
   "primary": $primary,
@@ -13,9 +14,22 @@ $theme-colors: (
 
 $custom-colors: (
   "tertiary": $tertiary,
+  "black": $black,
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);
+
+@for $i from 1 through 3 {
+  .vh-#{$i * 25} {
+    height: $i * 25vh;
+  }
+}
+
+@for $i from 1 through 3 {
+  .min-vh-#{$i * 25} {
+    min-height: $i * 25vh;
+  }
+}
 
 @for $i from 1 through 5 {
   .a-l-fade-in-#{$i} {
@@ -33,19 +47,36 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   }
 }
 
+@for $i from 1 through 3 {
+  .a-l-float-#{$i} {
+    animation: float $i * 1.75s infinite ease-in-out alternate;
+  }
+}
+
+@keyframes float {
+  from {
+    transform: translateY(-0.5rem);
+  }
+
+  to {
+    transform: translateY(0.5rem);
+  }
+}
+
 .a-h-rise {
+  will-change: transform;
   transform: translateY(0rem);
   transition: transform 0.15s ease-in-out;
 }
 
-button.a-h-rise {
+.btn.a-h-rise {
   transition: transform 0.15s ease-in-out, color 0.15s ease-in-out,
     background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
     box-shadow 0.15s ease-in-out;
 }
 
 .a-h-rise:hover {
-  transform: translateY(-0.5rem);
+  transform: translateY(-0.25rem);
 }
 
 @import "node_modules/bootstrap/scss/bootstrap";

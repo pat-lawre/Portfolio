@@ -23,7 +23,7 @@
         <div class="row align-items-center justify-content-evenly">
           <div class="col-md-6">
             <img
-              class="img-responsive a-l-fade-in-1 a-h-rise"
+              class="img-responsive a-l-fade-in-1 a-h-rise a-l-float-1"
               src="res/logo_white.svg"
               width="50%"
             />
@@ -31,7 +31,9 @@
         </div>
       </div>
 
-      <div class="container-md bg-white py-5 rounded a-l-fade-in-1 a-h-rise">
+      <div
+        class="container-md bg-white py-5 rounded a-l-fade-in-1 a-h-rise a-l-float-3"
+      >
         <div class="container-md">
           <div class="row align-items-center justify-content-evenly">
             <div class="col-md-6">
@@ -52,17 +54,103 @@
           <div class="row align-items-center justify-content-evenly">
             <div class="col-md-6">
               <p class="h4 mb-5 a-l-fade-in-3 a-h-rise">
-                Come and check out my stuff
+                Keep scrolling for a summary of me and my work or you can access
+                the full website
               </p>
-              <a href="home.html">
+              <a class="nav-link" href="home.html">
                 <button
                   type="button"
-                  class="btn btn-primary btn-lg shadow a-l-fade-in-4 a-h-rise"
+                  class="btn btn-primary btn-lg shadow mb-5 a-l-fade-in-4 a-h-rise"
                 >
-                  Go to portfolio
+                  Access full website
                   <i class="bi-box-arrow-in-right text-white"></i>
                 </button>
               </a>
+
+              <p class="h4 mb-5 a-l-fade-in-3 a-h-rise">
+                Already know what you need? Let's talk about it
+              </p>
+
+              <button
+                type="button"
+                class="btn btn-primary btn-lg shadow a-l-fade-in-4 a-h-rise"
+                data-bs-toggle="modal"
+                data-bs-target="#contactForm"
+              >
+                Contact
+                <i class="bi-envelope text-white"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="contactForm"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Get in touch</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+              ></button>
+            </div>
+
+            <div class="modal-body text-start h5 fw-normal">
+              <div class="mb-3">
+                <label for="nameInputField" class="form-label">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nameInputField"
+                  placeholder="John Doe"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="emailInputField" class="form-label"
+                  >Email address</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="emailInputField"
+                  placeholder="john@doe.com"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="phoneInputField" class="form-label"
+                  >Phone Number</label
+                >
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phoneInputField"
+                  placeholder="(123) 456-7890"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="messageInputField" class="form-label"
+                  >Message</label
+                >
+                <textarea
+                  class="form-control"
+                  id="messageInputField"
+                  rows="7"
+                  placeholder=""
+                ></textarea>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary shadow">Send</button>
             </div>
           </div>
         </div>
@@ -70,7 +158,7 @@
 
       <div class="container-md">
         <div class="row align-items-center justify-content-evenly">
-          <ul class="list-inline mt-5 a-l-fade-in-5">
+          <ul class="list-inline m-5 a-l-fade-in-5 a-l-float-2">
             <li class="list-inline-item m-4 a-h-rise">
               <a href="https://www.instagram.com/pat_lawre">
                 <i class="bi-instagram fs-1 text-white"></i>
@@ -101,6 +189,143 @@
               </a>
             </li>
           </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid mx-0 vh-50 bg-black text-white">
+      <h1
+        class="d-flex justify-content-center align-items-center text-center fw-bold h-100"
+      >
+        Projects
+      </h1>
+    </div>
+
+    <div class="container-fluid my-5 vh-100">
+      <div class="container-md">
+        <div class="row g-5">
+          <div class="col">
+            <div class="card a-h-rise mx-auto a-l-float-1">
+              <div class="container-fluid">
+                <img
+                  src="res/logo_black.svg"
+                  class="card-img-top shadow rounded my-3 a-h-rise"
+                />
+              </div>
+
+              <div class="card-body">
+                <h5 class="card-title a-h-rise">This portfolio</h5>
+                <p class="card-text a-h-rise">
+                  Purpose is to show off my web development skills and provide a
+                  way for prospective clients to contact me
+                </p>
+
+                <p class="card-text a-h-rise">
+                  Runs on a LAMP stack with customized Bootstrap
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card a-h-rise mx-auto a-l-float-2">
+              <div class="container-fluid">
+                <img
+                  src="res/synth_logo.svg"
+                  class="card-img-top shadow rounded my-3 a-h-rise"
+                />
+              </div>
+
+              <div class="card-body">
+                <h5 class="card-title a-h-rise">Synth - Discord bot</h5>
+                <p class="card-text a-h-rise">
+                  A highly customizable bot that assists you in your friend
+                  group's or small-size public server
+                </p>
+
+                <p class="card-text a-h-rise">
+                  Made using node.js, discord.js, React.js, and MySQL
+                </p>
+
+                <div class="d-flex align-items-center justify-content-evenly">
+                  <a
+                    href="https://synth-bot.com/"
+                    class="btn btn-primary shadow a-h-rise m-1"
+                    >View website</a
+                  >
+                  <a
+                    href="https://pat-lawre.com/projects.html"
+                    class="btn btn-primary shadow a-h-rise m-1"
+                    >More info</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card a-h-rise mx-auto a-l-float-3">
+              <div class="container-fluid">
+                <img
+                  src="res/keychain_logo.svg"
+                  class="card-img-top shadow rounded my-3 a-h-rise"
+                />
+              </div>
+
+              <div class="card-body">
+                <h5 class="card-title a-h-rise">
+                  Keychain - Social engineering service
+                </h5>
+                <p class="card-text a-h-rise">
+                  A Linktree inspired Android app that had a similar, but
+                  different use case than Linktree. Keychain would allow you to
+                  add all your new aquaintances on every social media app with a
+                  click of a button.
+                </p>
+
+                <p class="card-text a-h-rise">
+                  The code was written during a hackathon and the code hasn't
+                  been touched in a long time.
+                </p>
+
+                <p class="card-text a-h-rise">
+                  Made using Android Studio, Java, and SQLite
+                </p>
+
+                <div class="d-flex align-items-center justify-content-evenly">
+                  <a
+                    href="https://pat-lawre.com/projects.html"
+                    class="btn btn-primary shadow a-h-rise m-1"
+                    >More info</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card a-h-rise mx-auto a-l-float-2">
+              <div class="card-body">
+                <h5 class="card-title a-h-rise">Website Templates</h5>
+                <p class="card-text a-h-rise">
+                  Here's a collection of website templates I've made. They're
+                  all free to use and open source
+                </p>
+
+                <p class="card-text a-h-rise">
+                  Each of these websites use different technologies
+                </p>
+
+                <div class="d-flex align-items-center justify-content-evenly">
+                  <a
+                    href="https://pat-lawre.com/projects.html"
+                    class="btn btn-primary shadow a-h-rise m-1"
+                    >More info</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
